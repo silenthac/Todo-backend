@@ -21,6 +21,12 @@ public class Todo{
 	private boolean completed;
 	
 	
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
+	
+	
+	
 	public Todo() {};
 	
 	
@@ -61,6 +67,19 @@ public class Todo{
 	{
 		this.completed =completed;
 	}
+	
+	public  void setUser(User user)
+	{
+		  this.user = user;
+	}
+	
+	public  User getUser()
+	{
+		return  this.user;
+	}
+	
+	
+	
 	
 	
 	
